@@ -1,0 +1,62 @@
+@font-face{
+    src: url("/Product Sans Bold.ttf");
+    font-family: sansp;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sansp;
+}
+.container-fluid{
+    margin-top: 150px;
+}
+input{
+    margin: 5px 0px;
+}
+.cont-cv{
+    background-color: rgb(207, 207, 207);
+}
+.cont-fname{
+    width:45% !important;
+}
+#printFName ,#printLname{
+    font-size: 40px;
+    
+}
+.alertFName,.alertLName,.alertEamil,.alertLinkedIn ,.alertGitub{
+    display:none;
+}
+.cont-lname{
+    width:50% !important;
+}
+.cont-Name{
+    width:50%;
+}
+.cont-Name h1{
+    font-size: 20px;
+}
+.cont-Social{
+    width: 45%;  
+}
+.linkLinkedIn{
+    color: blue;
+}
+.githubLink{
+    color: blue;
+}
+textarea{
+    width: 100%;
+}
+#printUniversity{
+    color: blue;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+@media all and (max-width:570px){
+    .container-fluid{
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,193 @@
+@font-face{
+    src: url("/Product Sans Bold.ttf");
+    font-family: sansp;
+}
+body{
+    overflow: hidden;
+    font-family: sansp;
+    font-weight: 800px;
+}
+
+.loadding{
+   position: fixed !important;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: 99999999.999999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.nav-link{
+    color: black;
+    font-size: 25px;
+}
+a{
+  color: white !important;
+  font-size: 18px !important;
+}
+#home{
+    margin-top:100px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 100px;
+    height: 108px;
+    color: #fff;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+
+.cont-desc{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEyIiBoZWlnaHQ9IjEyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtLjcxNSA0MS4yMzIgNTIuODkyIDMzLjkwNUw4OC45OSAxOS45MDUuNzE1IDQxLjIzMloiIGZpbGw9IiNEN0U2RkUiLz48cGF0aCBkPSJtNTguNDM4IDEyMy43NjItNDIuOTc5LTUuMzA5IDE1LjQ3OC0yMS4wMTEgMjcuNTAxIDI2LjMyWiIgZmlsbD0iI0UwRjVEQiIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtNTMuOTY3IDkyLjU2MyA0Ny40NTUtNDEuMzkzTDU4LjI1IDEuNjM0bC00LjI4MyA5MC45M1oiIGZpbGw9IiNGMUY4RkUiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTkzLjMwMiA4OC40MzMgMTcuODAyLTUuODgtNi4xMzYtMTguNTc2LTExLjY2NiAyNC40NTZaIiBmaWxsPSIjODhCNUZDIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgxMTJ2MTI2SDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
+    background-size: 15%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
+.cont-img{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEyIiBoZWlnaHQ9IjEyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtLjcxNSA0MS4yMzIgNTIuODkyIDMzLjkwNUw4OC45OSAxOS45MDUuNzE1IDQxLjIzMloiIGZpbGw9IiNEN0U2RkUiLz48cGF0aCBkPSJtNTguNDM4IDEyMy43NjItNDIuOTc5LTUuMzA5IDE1LjQ3OC0yMS4wMTEgMjcuNTAxIDI2LjMyWiIgZmlsbD0iI0UwRjVEQiIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtNTMuOTY3IDkyLjU2MyA0Ny40NTUtNDEuMzkzTDU4LjI1IDEuNjM0bC00LjI4MyA5MC45M1oiIGZpbGw9IiNGMUY4RkUiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTkzLjMwMiA4OC40MzMgMTcuODAyLTUuODgtNi4xMzYtMTguNTc2LTExLjY2NiAyNC40NTZaIiBmaWxsPSIjODhCNUZDIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgxMTJ2MTI2SDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
+    background-size: 15%;
+    background-position: 100% 90%;
+    background-repeat: no-repeat;
+}
+.btn-1{
+    background-color: #D04141;
+    padding:10px 30px;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #D04141;
+}
+.btn-2{
+    background-color: #D04141;
+    padding:10px 10px;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #D04141;
+}
+.cvs{
+    width: 150px;
+    height: 170px;
+}
+h2{
+    background-color: #AAC8F8;
+    width: 10%;
+    margin: auto;
+    padding:5px 0px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-top: 5px;
+    color: white;
+}
+.foteer{
+    height: 200px;
+    background-image: url('/photos/triangles-400@2x.jpg');
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h5{
+    color: white;
+    font-size:35px;
+}
+img{
+    transition: all 0.5s;
+}
+img:hover{
+    transform: scale(1.06);
+}
+@media all and (max-width:570px){
+.logo{
+        width: 20% !important;
+    }
+    .cv-img{
+        width: 70% !important;
+    }
+    .advant{
+        width: 100% !important;
+    }
+}
+@media all and (min-width:780px){
+    .cv-img{
+        width: 100% !important;
+        height:85%;
+    }
+    .advant{
+        width: 90% !important;
+    }
+}
+@media all and (min-width:1200px){
+    .cv-img{
+        width: auto !important;
+        height:auto !important;
+    }
+}
