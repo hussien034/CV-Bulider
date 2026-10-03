@@ -4,181 +4,412 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cv Builder</title>
+    <title>CV Builder | Professional Resume Maker</title>
+    <meta name="description" content="Create a professional resume and CV with a modern online builder. Design, customize, and download your resume in minutes.">
+    <script>
+        try {
+            document.documentElement.dataset.theme = localStorage.getItem('cv-builder-theme') || 'light';
+        } catch (error) {
+            document.documentElement.dataset.theme = 'light';
+        }
+    </script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
-    
 </head>
 <body>
-    <div class="container-fluid w-100 cont-navbar">
-        <div class="container ">
-             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid  flex-nowrap">
-              <a class="navbar-brand" href="#">
-                <img src="photos/122-1225423_curriculum-vitae-logo-png-removebg-preview.png" class="w-25 logo">
-              </a>
-            </div>
-          </nav>
-        </div>
-       
+    <div class="loader-screen">
+        <div class="loader"></div>
     </div>
-    <div id="home">
-        <div class="loadding">
-            <span class="loader"></span>
-        </div>
-   <div class="container">
-        <div class="row g-3 justify-content-between">
-            <div class="col-md-5 cont-desc wow animate fadeInLeftBig">
-                <h1>CV Builder Online Resume
-                <br>Builder.</h1>
-                <h1>Create a Professional
-                <br> Resume for Free.</h1>
-                <h6>Free to use. Developed by hiring professionals.</h6>
-                <br>
-                <p>Resume writing can be stressful, confusing, and time-consuming<br> if you do it all on your own. With our Resume Maker, it’s quick,<br> pain-free, and effective.</p>
-                <br>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button class="btn-1 w-100"><a class="nav-link" href="cv.html">CREATE YOUR RESUME NOW</a></button>
+
+    <header class="topbar">
+        <nav class="container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html" aria-label="CV Builder home">
+                <span class="brand-mark">CV</span>
+                <span class="brand-text">Builder</span>
+            </a>
+            <div class="navbar-controls">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                    <span>Dark mode</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#templates">Templates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a class="btn btn-light btn-outline" href="#pricing">Plans</a>
+                    <a class="btn btn-primary" href="cv.html">Build My CV</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy wow fadeInLeftBig" data-wow-duration="1s">
+                    <span class="eyebrow">Professional resume builder</span>
+                    <h1>Build a standout CV that gets interviews.</h1>
+                    <p>
+                        Create polished resumes, cover letters, and personal profiles in minutes.
+                        Designed for students, professionals, and career changers who want a modern,
+                        recruiter-ready application.
+                    </p>
+                    <div class="cta-row">
+                        <a class="btn btn-primary btn-lg" href="cv.html">Create My Resume</a>
+                        <a class="btn btn-secondary btn-lg" href="#templates">See Templates</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>Average rating</span>
+                        </div>
+                        <div>
+                            <strong>20k+</strong>
+                            <span>Resumes built</span>
+                        </div>
+                        <div>
+                            <strong>98%</strong>
+                            <span>ATS friendly</span>
+                        </div>
                     </div>
                 </div>
-               
-            </div>
-            <div class="col-md-6 d-flex justify-content-center cont-img wow animate fadeInRightBig">
-                <img src="photos/resume-builder-jumbotron-image@1x.png" class="cv-img">
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="container-fluid mt-5">
-        <div class="row d-flex justify-content-center wow animate fadeInUpBig">
-        <div class="col-md-8 text-center  ">
-            <h1>Just four simple steps to download your resume:
-            </h1>    
-        </div> 
-        </div>
-    </div>
-    <div class="container mt-4">
-        <div class="row mt-3">
-            <div class="col-md-3 wow animate fadeInUpBig">
-                <div class="desc-sorts text-center">
-                    <img src="photos/step_1@2x.png" class="cvs">
-                    <h2>1</h2>
-                    <p>Pick a template.</p>
-                </div>
-            </div>
-            <div class="col-md-3 wow animate fadeInUpBig">
-                <div class="desc-sorts text-center">
-                    <img src="photos/step_2@2x.png" class="cvs">
-                    <h2>2</h2>
-                    <p>Make your resume in our app.</p>
-                </div>
-            </div>
-            <div class="col-md-3 wow animate fadeInUpBig">
-                <div class="desc-sorts text-center">
-                    <img src="photos/step_3@2x.png" class="cvs">
-                    <h2>3</h2>
-                    <p>Customize the design.</p>
-                </div>
-            </div>
-            <div class="col-md-3 wow animate fadeInUpBig">
-                <div class="desc-sorts text-center">
-                    <img src="photos/step_4@2x.png" class="cvs">
-                    <h2>4</h2>
-                    <p>Download in DOC or PDF.
 
-                    </p>
+                <div class="hero-visual wow fadeInRightBig" data-wow-duration="1s">
+                    <div class="resume-window">
+                        <div class="window-bar">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-header">
+                                <div>
+                                    <h3>Olivia James</h3>
+                                    <p>Product Designer</p>
+                                </div>
+                                <span class="status-pill">Available</span>
+                            </div>
+                            <div class="meta-list">
+                                <span>olivia@email.com</span>
+                                <span>+1 415 228 1121</span>
+                            </div>
+                            <div class="resume-sections">
+                                <div>
+                                    <h4>Summary</h4>
+                                    <p>Creative product designer focused on user-centered digital experiences.</p>
+                                </div>
+                                <div>
+                                    <h4>Experience</h4>
+                                    <ul>
+                                        <li>Led UX strategy for SaaS product redesign</li>
+                                        <li>Improved user engagement by 34%</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4>Skills</h4>
+                                    <div class="skill-tags">
+                                        <span>UX</span>
+                                        <span>Figma</span>
+                                        <span>Research</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row d-flex justify-content-center mt-5 wow animate fadeInUpBig">
-            <div class="col-md-2 text-center">
-                <div class="btn-2">
-                    <a class="nav-link" href="cv.html"> CREATE MY RESUME</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row d-flex justify-content-center mt-5 wow animate fadeInUpBig">
-            <div class="col-md-8 text-center">
-                <h1>What’s in it for you?<br>
-                Here’s what our resume maker has to offer:</h1>
-            </div>
-            
-        </div>
-        <div class="row d-flex justify-content-center align-items-center mt-5">
-            <div class="col-md-6 wow animate fadeInLeftBig">
-                <img src="photos/overview_1@1x.png" class="advant">
-            </div>
-            <div class="col-md-4 wow animate fadeInRightBig">
-                <h3>1. Professional templates for all types of jobs</h3>
-                <br>
-                <p>Our resume creator comes with 18 fully customizable templates. You’ll get advice on which one to pick depending on your industry, seniority level, and the kind of company you’re applying to.
+        </section>
 
-                </p>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center align-items-center mt-5">
-            <div class="col-md-4 wow animate fadeInLeftBig">
-                <h3>2. Resume score</h3>
-                <br>
-                <p>Once you’re done with filling your document in the editor, our resume builder will score it against your competitors and give you detailed tips on how exactly to improve your resume.</p>
-            </div>
-            <div class="col-md-6 d-flex justify-content-center wow animate fadeInRightBig">
-                <img src="photos/overview_2@1x.png" class=" w-75 advant">
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center align-items-center mt-5">
-            <div class="col-md-6 wow animate fadeInLeftBig">
-                <img src="photos/overview_3@1x.png" class=" w-75 advant">
-            </div>
-            <div class="col-md-4 wow animate fadeInRightBig">
-                <h3>3. Matching cover letter builder</h3>
-                <br>
-                <p>You can create a cover letter that matches the design of your resume—recruiters will appreciate your professionalism and attention to detail</p>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center align-items-center mt-5 ">
-            <div class="col-md-4 wow animate fadeInLeftBig ">
-                <h3>4. Generate a resume & download in PDF or DOC without limits</h3>
-                <br>
-                <p>Create, save, and download multiple versions of your resume to apply for different positions. Switch between templates in a flash. Add or remove content. Our easy resume generator will make sure the layout stays intact. You can download your resume in PDF, Word, or even as an image. Make and download your resume with no compromises.</p>
-            </div>
-            <div class="col-md-6 d-flex justify-content-center  wow animate fadeInRightBig">
-                <img src="photos/overview_6@1x.png" class="advant">
-            </div>
-        </div>
-        <div class="row mt-5 d-flex justify-content-center align-items-center">
-            <div class="col-md-6 wow animate fadeInLeftBig">
-                <img src="photos/overview_5@1x.png" class="advant">
-            </div>
-            <div class="col-md-4 wow animate fadeInRightBig">
-                <h3>5. Resume creation made easy with ready-to-use suggestions for major professions
-                </h3>
-                <br>
-                <p>When making a resume with our online resume builder, you’ll get dozens of personalized content suggestions for every section. All of the pre-written tips have been curated by our team of Certified Professional Resume Writers.
-
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="foteer wow animate fadeInUpBig">
-        <div class="container-fluid">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h5>Try Cv Bulider professional resume builder now</h5> 
+        <section class="brands-wrap">
+            <div class="container brands">
+                <span>Trusted by growing teams and ambitious professionals</span>
+                <div class="brand-list">
+                    <span>Google</span>
+                    <span>Microsoft</span>
+                    <span>Slack</span>
+                    <span>Notion</span>
+                    <span>Dropbox</span>
                 </div>
             </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-heading wow fadeInUp">
+                    <span class="section-tag">Why people choose us</span>
+                    <h2>Everything you need to create a modern CV</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card wow fadeInUp">
+                        <div class="icon-box"><i class="fa-solid fa-file-lines"></i></div>
+                        <h3>Professional templates</h3>
+                        <p>Designed with recruiter expectations in mind, and optimized for clarity and readability.</p>
+                    </article>
+                    <article class="feature-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>ATS-friendly output</h3>
+                        <p>Structure that aligns with applicant tracking systems, helping your application stand out.</p>
+                    </article>
+                    <article class="feature-card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon-box"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h3>Easy customization</h3>
+                        <p>Update sections, adjust colors, and refine details without losing your layout or formatting.</p>
+                    </article>
+                    <article class="feature-card wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="icon-box"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                        <h3>Download in seconds</h3>
+                        <p>Export a clean resume in PDF or print-ready format without the hassle of manual editing.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt-bg" id="templates">
+            <div class="container">
+                <div class="section-heading wow fadeInUp">
+                    <span class="section-tag">Smart templates</span>
+                    <h2>Choose a style that matches your goals</h2>
+                </div>
+
+                <div class="template-grid">
+                    <div class="template-card wow fadeInUp">
+                        <div class="mini-cv classic"></div>
+                        <h3>Classic</h3>
+                        <p>Best for corporate and professional roles.</p>
+                    </div>
+                    <div class="template-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="mini-cv modern"></div>
+                        <h3>Modern</h3>
+                        <p>Clean and confident for tech and design roles.</p>
+                    </div>
+                    <div class="template-card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="mini-cv executive"></div>
+                        <h3>Executive</h3>
+                        <p>Designed for senior leadership and strategic roles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-heading wow fadeInUp">
+                    <span class="section-tag">Simple workflow</span>
+                    <h2>Just four steps to a polished CV</h2>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card wow fadeInUp">
+                        <span class="step-number">1</span>
+                        <h3>Pick a template</h3>
+                        <p>Select a design that fits your role, industry and career stage.</p>
+                    </div>
+                    <div class="step-card wow fadeInUp" data-wow-delay="0.1s">
+                        <span class="step-number">2</span>
+                        <h3>Add your details</h3>
+                        <p>Fill in your education, experience, summary, and key achievements.</p>
+                    </div>
+                    <div class="step-card wow fadeInUp" data-wow-delay="0.2s">
+                        <span class="step-number">3</span>
+                        <h3>Customize the design</h3>
+                        <p>Adjust layout, colors, and position details to match your brand.</p>
+                    </div>
+                    <div class="step-card wow fadeInUp" data-wow-delay="0.3s">
+                        <span class="step-number">4</span>
+                        <h3>Download and apply</h3>
+                        <p>Export a clean PDF or print-ready document in seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats-band">
+            <div class="container stats-grid">
+                <div class="stat-item wow fadeInUp">
+                    <strong>95%</strong>
+                    <span>People finish in less than 15 minutes</span>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.1s">
+                    <strong>3x</strong>
+                    <span>More interview responses with optimized CVs</span>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.2s">
+                    <strong>18</strong>
+                    <span>Professional templates ready to use</span>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.3s">
+                    <strong>24/7</strong>
+                    <span>Access from any device or browser</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="pricing">
+            <div class="container">
+                <div class="section-heading wow fadeInUp">
+                    <span class="section-tag">Flexible pricing</span>
+                    <h2>Choose a plan that fits your stage</h2>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="price-card wow fadeInUp">
+                        <span class="plan-name">Starter</span>
+                        <h3>Free</h3>
+                        <ul>
+                            <li>3 resume templates</li>
+                            <li>Basic customization</li>
+                            <li>PDF export</li>
+                        </ul>
+                        <a class="btn btn-secondary" href="cv.html">Try Free</a>
+                    </div>
+                    <div class="price-card popular wow fadeInUp" data-wow-delay="0.1s">
+                        <span class="plan-badge">Most popular</span>
+                        <span class="plan-name">Pro</span>
+                        <h3>$14<span>/month</span></h3>
+                        <ul>
+                            <li>Unlimited resumes</li>
+                            <li>All premium templates</li>
+                            <li>Cover letter builder</li>
+                            <li>Priority downloads</li>
+                        </ul>
+                        <a class="btn btn-primary" href="cv.html">Start Pro</a>
+                    </div>
+                    <div class="price-card wow fadeInUp" data-wow-delay="0.2s">
+                        <span class="plan-name">Business</span>
+                        <h3>$29<span>/month</span></h3>
+                        <ul>
+                            <li>Team collaboration</li>
+                            <li>Custom brand kit</li>
+                            <li>Advanced analytics</li>
+                            <li>Support for hiring teams</li>
+                        </ul>
+                        <a class="btn btn-secondary" href="#">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-heading wow fadeInUp">
+                    <span class="section-tag">What users say</span>
+                    <h2>Real people, better job applications</h2>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card wow fadeInUp">
+                        <p>�I built my CV in under 20 minutes and landed interviews within two weeks. The layout looks premium and highly professional.�</p>
+                        <div class="person">
+                            <strong>Sarah M.</strong>
+                            <span>Marketing Specialist</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card wow fadeInUp" data-wow-delay="0.1s">
+                        <p>�The templates are easy to customize, and the export process is seamless. It feels like a professional design tool without the complexity.�</p>
+                        <div class="person">
+                            <strong>Daniel K.</strong>
+                            <span>Software Engineer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card wow fadeInUp" data-wow-delay="0.2s">
+                        <p>�As a recent graduate, I needed something simple and polished. This website gave me a CV I�m actually proud to send.�</p>
+                        <div class="person">
+                            <strong>Amira T.</strong>
+                            <span>Graduate Analyst</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq">
+            <div class="container faq-wrap">
+                <div class="section-heading wow fadeInUp">
+                    <span class="section-tag">Frequently asked questions</span>
+                    <h2>Everything you need to know</h2>
+                </div>
+
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item active">
+                        <button class="accordion-button" type="button">Is this resume builder free?</button>
+                        <div class="accordion-content" style="max-height: 120px;">
+                            <p>Yes, a free plan is available. You can create and export a professional CV without paying, and upgrade anytime for more templates and features.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" type="button">Can I download my resume as PDF?</button>
+                        <div class="accordion-content">
+                            <p>Absolutely. You can export your final resume as a PDF or print-ready document directly from the editor.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" type="button">Does it work on mobile?</button>
+                        <div class="accordion-content">
+                            <p>Yes, the layout is responsive and works well on desktops, tablets, and phones for quick edits on the go.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container cta-box wow fadeInUp">
+                <div>
+                    <span class="section-tag light">Ready to improve your job search?</span>
+                    <h2>Build a CV recruiters can�t ignore.</h2>
+                </div>
+                <a class="btn btn-light btn-lg" href="cv.html">Start Building</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">CV</span>
+                    <span class="brand-text">Builder</span>
+                </a>
+                <p>Professional resume solutions for ambitious job seekers.</p>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#templates">Templates</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="cv.html">Builder</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+        <div class="footer-bottom">
+            <p>� 2026 CV Builder. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/theme.js"></script>
 </body>
 </html>
